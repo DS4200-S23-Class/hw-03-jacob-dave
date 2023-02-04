@@ -2,17 +2,255 @@
 <html> 
 
 <head>
+    <!--  linking the style sheet and adding a title  -->
     <meta charset=utf-8/>
     <link rel="stylesheet" href="style.css">
     <title>hw-03</title>
 </head>
 
-
+<!-- creating the body-->
 <body>
-    <div>
-        <h1 class="center">hw-03: Interactive Webpage, and Marks & Channels</h1>
-
+    <h1 class="center">
+        hw-03: Interactive Webpage, and Marks & Channels
+    </h1>
+    <h2 class="center">
+        By: Jacob Kulik & David Pogrebitskiy
+    </h2>
+    <div class="center">
+        <button class="button" type ="button" onClick="buttonClicked()">Toggle Dark Mode</button>
     </div>
+    <!--  creating a div that will contain both columns  -->
+    <div class="container">
+        <!--   using flexbox to put all our images on the left side     -->
+        <div class="left-column">
+            <div>
+                <img src="img/vis1.png" alt="Election Map">
+            </div>
+            <div>
+                <img src="img/vis2.png" alt="Batting Viz">
+            </div>
+            <div>
+                <img src="img/subway.png" alt="Subway Map">
+            </div>
+
+
+        </div>
+        <!-- putting all headers and lists on the right side of the page-->
+        <div class="right-column">
+            <div>
+                <h2>
+                    Marks
+                </h2>
+                <ul>
+                    <li>
+                        Mark 1 - Points
+                        <ul>
+                            <li>Each state represents a point in our map of the US</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Mark 2 - Line
+                        <ul>
+                            <li>The bar above the map is a rectangle that represents 100% of the votes</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h2>
+                    Channels
+                </h2>
+                <ul>
+                    <li>
+                        Channel 1 - Color
+                        <ul>
+                            <li>
+                               Represents Categorical Attribute, Red vs Blue states
+                            </li>
+                            <li>
+                                This is a good mapping because the audience is able to see which state voted for which
+                                political party, based off red being a Republican vote and blue being a Democratic vote.
+                                Further, we are able to see the scale at which Clinton would have won due to a wave of
+                                the color blue on our points (states).
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        Channel 2 - Length
+                        <ul>
+                            <li>
+                               Represents sequentially ordered data (electoral votes)
+                            </li>
+                            <li>
+                                This is a good mapping because without needing to add up the electoral votes per
+                                political party, the audience can see a longer blue line and a significantly shorter
+                                red line, further emphasizing the scale at which the Clinton would have won.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h2>
+                    Colormaps
+                </h2>
+                <ul>
+                    <li>
+                        Colormap 1 - Categorical
+                        <ul>
+                            <li>
+                                Represents categorical attribute, state's political party
+                            </li>
+                            <li>
+                                This is a good mapping because distinct categories (party) are different colors. These
+                                colors also follow proper principal as they are perpetually distant and the same saturation.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>
+                    Marks
+                </h2>
+                <ul>
+                    <li>
+                        Mark 1 - Points
+                        <ul>
+                            <li>Each point represents a ball with a certain exit velocity and launch angle</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h2>
+                    Channels
+                </h2>
+                <ul>
+                    <li>
+                        Channel 1 - Horizontal and Vertical Position
+                        <ul>
+                            <li>
+                               Launch Angle - Ordered cyclical data
+                            </li>
+                            <li>
+                                Exit Velocity - Ordered sequential data
+                            </li>
+                            <li>
+                                This is a good mapping because the audience can see the launch angles that different
+                                exit velocity balls have.
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        Channel 2 - Color
+                        <ul>
+                            <li>
+                               Represents the divergent attribute of scoring value with the center being the average score
+                            </li>
+                            <li>
+                                This is a good mapping because the audience can see the score of different points,
+                                based on the color in the given gradient.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h2>
+                    Colormaps
+                </h2>
+                <ul>
+                    <li>
+                        Colormap 1 - Divergent
+                        <ul>
+                            <li>
+                                Represents the scoring value as a divergent attribute
+                            </li>
+                            <li>
+                                This is a good mapping because two colors (yellow and purple) are used to indicate extremes
+                                of a range. These colors also follow proper principal as there is a neutral color (white)
+                                in the middle. There is also no point in which there is a "no data" point, white on the
+                                visualization is a midpoint.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h2>
+                    Marks
+                </h2>
+                <ul>
+                    <li>
+                        Mark 1 - Points
+                        <ul>
+                            <li>Each point represents a station in the NYC Subway system</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h2>
+                    Channels
+                </h2>
+                <ul>
+                    <li>
+                        Channel 1 - Color
+                        <ul>
+                            <li>
+                               Represents categorical attribute, type of train division (BMT, Independent, Interborough)
+                            </li>
+                            <li>
+                                This is a good mapping because the audience can see the distinction between different
+                                train divisions.
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        Channel 2 - Size
+                        <ul>
+                            <li>
+                               Represents the sequential attribute of train line count (number of trains that go through a certain station)
+                            </li>
+                            <li>
+                                This is a good mapping because the audience can easily see the difference between large and small stations
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h2>
+                    Colormaps
+                </h2>
+                <ul>
+                    <li>
+                        Colormap 1 - Categorical
+                        <ul>
+                            <li>
+                                Represents the different categories of train divisions
+                            </li>
+                            <li>
+                                This is a good mapping because distinct categories (train divisions) are different colors. These
+                                colors also follow proper principal as they are perpetually distant and the same saturation.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+
+    <div>
+        <h2 class="center">Acknowledgements</h2>
+        <ul>
+            <li>
+                <a href="https://www.geeksforgeeks.org/how-to-create-dark-light-mode-for-website-using-javascript-jquery/">
+                    Dark mode toggle button
+                </a>
+            </li>
+            <li>
+                <a href="https://www.w3schools.com/css/css3_buttons.asp">Custom buttons</a>
+            </li>
+            <li>
+                <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox guide</a>
+            </li>
+        </ul>
+    </div>
+    <script src="main.js"></script>
+
 
 </body>
 

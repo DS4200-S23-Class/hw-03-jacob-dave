@@ -1,7 +1,52 @@
 body {
     font-family: Arial;
+    background-color: white;
+    color: black;
+}
+/* Will be used in our main.js file to toggle between modes */
+.dark-mode {
+    background-color: black;
+    color: white;
 }
 
 .center {
     text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 100px;
+}
+
+
+.button {
+    background-color: orange;
+    color: white;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: white;
+    color: orange;
+    border:orange;
 }
